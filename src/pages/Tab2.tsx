@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonList, IonItem, IonLabel, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
@@ -7,16 +7,18 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Users</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+      <IonContent>
+        <IonList>
+          <IonItem routerLink="/dashboard/users/1">
+            <IonLabel>User 1</IonLabel>
+          </IonItem>
+          <IonItem routerLink="/dashboard/users/2">
+            <IonLabel>User 2</IonLabel>
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );

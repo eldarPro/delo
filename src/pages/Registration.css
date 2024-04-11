@@ -1,0 +1,9 @@
+.reg_type_img {
+  width: 90px;
+  height: 90px;
+}
+
+.reg_type_title {
+  font-size: 21px !important;
+  font-weight: bold;
+}

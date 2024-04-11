@@ -1,0 +1,57 @@
+.main_profile_name {
+	font-size: 24px;
+	margin-bottom: 7px;
+}
+
+.main_profile_rating_block {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.main_profile_rating_block .rating_num {
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.rating_modal_header {
+	display:  flex;
+}
+
+.rating_modal_header .rating_num {
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+.rating_modal_title_block {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.moderation_status {
+	color: #ffac13
+}
+
+.pending_status {
+	color: #de1a1a
+}
+
+.moderation_status {
+	color: #fab928
+}
+
+.active_status {
+	color: #22bc2a
+}
+
+.status_block {
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+}

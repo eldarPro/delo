@@ -1,24 +1,27 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Profile.css';
+import { useEffect, useState } from 'react';
+import { getUserData, getUserType } from '../services/userData';
+import MasterProfile from './MasterProfile';
+import CustomerProfile from './CustomerProfile';
+import { IonLoading } from '@ionic/react';
 
 const Profile: React.FC = () => {
+
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [userType, setUserType] = useState('')
+  console.log('page profile')
+
+  useEffect(() => {
+    setIsLoading(true)
+    const userType = getUserType()
+    setUserType(userType)
+    setIsLoading(false)
+  }, [])
+
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Мой профиль</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Мой профиль</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Страница профиля" />
-      </IonContent>
-    </IonPage>
+    <>
+      <IonLoading duration={0} isOpen={isLoading} />
+      {userType === 'master' ? <MasterProfile /> : <CustomerProfile /> }
+    </>
   );
 };
 

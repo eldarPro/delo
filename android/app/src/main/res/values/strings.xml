@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">delo</string>
+    <string name="title_activity_main">delo</string>
+    <string name="package_name">io.ionic.delo</string>
+    <string name="custom_url_scheme">io.ionic.delo</string>
+</resources>

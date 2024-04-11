@@ -22,7 +22,7 @@ const MasterProfile: React.FC = () => {
   const [phone, setPhone] = useState('')
   const [rating, setRating] = useState('')
   const [address, setAddress] = useState('')
-  const [status, setStatus] = useState<number>()
+  const [status, setStatus] = useState<number>(0)
 
   const input = useRef<HTMLIonInputElement>(null);
 
@@ -187,7 +187,7 @@ const MasterProfile: React.FC = () => {
           </IonHeader>
 
           <IonContent className="ion-padding">
-            <div>Ваш статус <MasterStatus className='status_block'  status={status} /></div>
+            <div>Ваш статус <MasterStatus className='status_block' status={status} /></div>
             <br />
             <div><MasterStatusDescription status={status} /></div>        
           </IonContent>

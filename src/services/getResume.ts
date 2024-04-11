@@ -11,7 +11,7 @@ export async function getResume() {
       console.log("Resume data:", docSnap.data());
       result = docSnap.data()
     } else {
-      result = []
+      result = {}
       // docSnap.data() will be undefined in this case
       console.log("No such document!");
     }

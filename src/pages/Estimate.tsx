@@ -9,7 +9,7 @@ const Estimate: React.FC = () => {
 
   const [isLoading, setLoading] = useState<boolean>(true);
 
-  const [estimates, setEstimates] = useState([])
+  const [estimates, setEstimates] = useState<any[]>([])
 
   const fillData = async() => {
     const estimatesData = await getEstimates()

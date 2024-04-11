@@ -8,7 +8,7 @@ const Feedback: React.FC = () => {
   const [isLoading, setLoading] = useState<boolean>(false);
 
   const [feedbacks, setFeedbacks] = useState([])
-  const [message, setMessage] = useState()
+  const [message, setMessage] = useState('')
 
   const sendData = () => {
 

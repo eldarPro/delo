@@ -5,7 +5,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import db from '../firebaseConfig';
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import { chevronBack } from 'ionicons/icons';
-import { setUidUserData, setUserData } from '../services/userData';
+import { setUidUserData } from '../services/userData';
 
 const Registration3: React.FC = () => {
   const [email, setEmail] = useState('');

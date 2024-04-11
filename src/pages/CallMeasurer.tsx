@@ -10,7 +10,7 @@ const CallMeasurer: React.FC = () => {
 
   const fillData = async() => {
     const userData = await getUserData()
-    setPhone(userData.phone)
+    setPhone(userData.phone) 
   }
 
   const sendData = async() => {
@@ -40,7 +40,7 @@ const CallMeasurer: React.FC = () => {
               type="number" 
               placeholder="Номер телефона"
               labelPlacement="floating"
-              onIonChange={(e) => setPhone(parseInt(e.detail.value!))} />
+              onIonChange={(e) => setPhone(e.detail.value!)} />
             <br />
             <IonButton onClick={sendData} expand="full">Отправить заявку</IonButton>
           </>

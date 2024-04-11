@@ -1,11 +1,6 @@
 import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonList, IonLoading, IonModal, IonPage, IonSelect, IonSelectOption, IonTitle, IonToolbar } from '@ionic/react';
-import { addOutline, chevronBack } from 'ionicons/icons';
+import {  chevronBack } from 'ionicons/icons';
 import { useEffect, useRef, useState } from 'react';
-import { getUserFeedbacks } from '../services/getUserFeedbacks';
-import { getEstimates } from '../services/getEstimates';
-import EmptyText from '../components/EmptyText';
-import { Link } from 'react-router-dom';
-import { OverlayEventDetail } from '@ionic/react/dist/types/components/react-component-lib/interfaces';
 
 const NewEstimate: React.FC = () => {
 
@@ -13,14 +8,6 @@ const NewEstimate: React.FC = () => {
 
   const modal = useRef<HTMLIonModalElement>(null);
   const input = useRef<HTMLIonInputElement>(null);
-
-  function confirm(e) {
-    modal.current?.dismiss(input.current?.value, 'confirm');
-  }
-
-  useEffect(() => {
-    
-  }, [])
 
   return (
     <IonPage>

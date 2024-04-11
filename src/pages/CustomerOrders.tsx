@@ -11,7 +11,7 @@ const CustomerOrders: React.FC = () => {
 
   const [isLoading, setLoading] = useState<boolean>(true);
 
-  const [orders, setOrders] = useState([])
+  const [orders, setOrders] = useState<any[]>([])
 
   const fillData = async() => {
     const ordersData = await getCustomerOrders()

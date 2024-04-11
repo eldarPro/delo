@@ -14,7 +14,7 @@ const NewObjectAddress: React.FC = () => {
 
   const [address, setAddress] = useState([]);
   const [coords, setCoords] = useState([]);
-  const [useYmaps, setUseYmaps] = useState();
+  const [useYmaps, setUseYmaps] = useState<any>();
 
   const history = useHistory()
   const navigation = useIonRouter()
@@ -22,16 +22,16 @@ const NewObjectAddress: React.FC = () => {
   const handleMapClick = (e: any) => {
     const objectCoords = e.get('coords');
     console.log('coords', e)
-    getAddress(objectCoords)
+    getAddress(objectCoords);
   };
 
   const getAddress = async (objectCoords: any) => {
     setCoords(objectCoords)
-    // useYmaps.geocode(objectCoords).then((res: any) => {
-    //   const firstGeoObject = res.geoObjects.get(0);
-    //   const address = firstGeoObject.getAddressLine();
-    //   setAddress(address);
-    // });
+    useYmaps.geocode(objectCoords).then((res: any) => {
+      const firstGeoObject = res.geoObjects.get(0);
+      const address = firstGeoObject.getAddressLine();
+      setAddress(address);
+    });
   };
 
   const geocode = (ymaps: any) => {
